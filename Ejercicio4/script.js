@@ -1,12 +1,18 @@
-function veri (le){
-    if( le == "s" || le == "n"){
+function veri (ss){
+    var letra = prompt("Ingrese un caracter");
+    if( letra.toLowerCase() == "s" || letra.toLowerCase() == "n"){
         alert("CORRECTO");
+        ss = false;
+        return(ss);
     }else{
-        alert("INCORRECTO");
+        alert("INCORRECTO\ndebe ingresar 'S' o 'N'");
+        ss = true;
+        return(ss)
+        
     }
 }
 
-var letra = prompt("Ingrese un caracter");
 
-veri(letra.toLowerCase());
-
+do {
+    var s = true;
+} while (veri(s));
